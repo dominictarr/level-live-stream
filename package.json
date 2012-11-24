@@ -1,0 +1,19 @@
+{
+  "name": "level-live-stream",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dominictarr/level-live-stream",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/level-live-stream.git"
+  },
+  "dependencies": {
+    "through": "~1.1.2",
+    "level-hooks": "~1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "set -e; for t in test/*.js; do node $t; done"
+  },
+  "author": "'Dominic Tarr' <dominic.tarr@gmail.com> (http://dominictarr.com)",
+  "license": "MIT"
+}
