@@ -3,8 +3,8 @@
 Stream live changes from levelup.
 
 Works just like [LevelUp#readStream](https://github.com/rvagg/node-levelup#readStream)
-except it will not emit end when the range has been read from the database,
-instead, it will stay open and stream changes to the database as they are inserted!
+except in stead of ending, 
+it will stay open and stream changes to the database as they are inserted!
 
 Just like the couchdb changes feed, but for any arbitary range of keys!
 
