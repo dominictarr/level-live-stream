@@ -11,11 +11,11 @@ module.exports = function (db) {
     var start = opts.start, end = opts.end, onPost
     opts = opts || {}
 
-    var ts = through(function (data) {
-        this.queue(data)
-      }, function() {
-        this.queue(null)
-      })
+    if(opts.tail === false) {
+      return this.readStream(opts)
+    }
+
+    var ts = through()
 
     ts.range = opts
 
