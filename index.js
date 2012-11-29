@@ -28,6 +28,10 @@ module.exports = function (db) {
     var rs = this.readStream(opts)
     rs.pipe(ts, {end: false})
 
+    rs.once('end', function () {
+      ts.emit('sync')
+    })
+
     ts.once('close', function () {
       db.removeListener('hooks:post', onPost)
       rs.destroy()
