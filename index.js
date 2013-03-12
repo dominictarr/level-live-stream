@@ -17,7 +17,7 @@ module.exports = function (db, opts) {
     ts.queue(ch)
   })
 
-  var rs = this.readStream(opts)
+  var rs = this.createReadStream(opts)
   rs.pipe(ts, {end: false})
 
   rs.once('end', function () {
