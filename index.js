@@ -2,11 +2,10 @@ var through = require('through')
 
 module.exports = function (db, opts) {
 
-  var start = opts.start, end = opts.end, onPost
   opts = opts || {}
 
   if(opts.tail === false) {
-    return this.readStream(opts)
+    return db.createReadStream(opts)
   }
 
   var ts = through()
