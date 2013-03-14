@@ -7,8 +7,7 @@
     "url": "git://github.com/dominictarr/level-live-stream.git"
   },
   "dependencies": {
-    "through": "~2.1.0",
-    "level-hooks": "~1.1.0"
+    "through": "~2.1.0"
   },
   "devDependencies": {},
   "scripts": {
