@@ -10,7 +10,7 @@
     "through": "~2.1.0"
   },
   "peerDependencies": {
-    "level-sublevel": ">=4.0.0"
+    "level-sublevel": ">=4.0.2"
   },
   "devDependencies": {},
   "scripts": {
