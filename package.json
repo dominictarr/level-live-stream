@@ -9,6 +9,9 @@
   "dependencies": {
     "through": "~2.1.0"
   },
+  "peerDependencies": {
+    "level-sublevel": ">=4.0.0"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "set -e; for t in test/*.js; do node $t; done"
