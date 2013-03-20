@@ -12,7 +12,7 @@ module.exports = function (db, opts) {
 
   ts.range = opts
 
-  var removeHook = db.post(opts, function (ch) {
+  var removeHook = db.hooks.post(opts, function (ch) {
     ts.queue(ch)
   })
 
