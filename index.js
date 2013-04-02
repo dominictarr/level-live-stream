@@ -10,6 +10,8 @@ module.exports = function (db, opts) {
 
   var ts = through()
 
+  ts.writable = false
+
   ts.range = opts
 
   var removeHook = db.hooks.post(opts, function (ch) {
