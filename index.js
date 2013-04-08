@@ -10,7 +10,7 @@ module.exports = function (db, opts) {
 
   var ts = through()
 
-  ts.writable = false
+  ts.writable = true
 
   ts.range = opts
 
