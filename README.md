@@ -31,6 +31,19 @@ var levelup('/tmp/level-live-stream',
 
 ```
 
+## options
+
+``` js
+LiveStream(db, {
+  tail: true,   //follow
+  old : true,   //get old records from data base
+                //if old=false you will only get live updates
+  min : loKey,  //lowest key in range
+  max : hiKey,  //highest key in range
+  reverse: true //stream in reverse (only applies to old records)
+})
+```
+
 ## License
 
 MIT
