@@ -12,6 +12,10 @@ var liveStream = module.exports = function (db, opts) {
 }
 
 module.exports.install = function (db) {
+  db.methods = db.methods || {}
+  db.methods['liveStream'] =
+  db.methods['createLiveStream'] = {type: 'readable'}
+
   db.liveStream =
   db.createLiveStream =
     function (opts) {
