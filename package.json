@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "pull-stream-to-stream": "~1.2.4",
-    "pull-level": "~1.0.3"
+    "pull-level": "~1.1.0"
   },
   "peerDependencies": {
     "level-sublevel": ">=4.0.2"
