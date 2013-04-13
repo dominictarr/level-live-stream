@@ -1,34 +1,18 @@
 var through = require('through')
 
-module.exports = function (db, opts) {
-
+var liveStream = module.exports = function (db, opts) {
+  var ts
   opts = opts || {}
-
-  if(opts.tail === false) {
-    return db.createReadStream(opts)
-  }
-
-  var ts = through()
-
-  ts.writable = true
-
-  ts.range = opts
-
-  var removeHook = db.hooks.post(opts, function (ch) {
-    ts.queue(ch)
-  })
-
-  var rs = db.createReadStream(opts)
-  rs.pipe(ts, {end: false})
-
-  rs.once('end', function () {
+  opts.onSync = function () {
     ts.emit('sync')
-  })
+  }  
+  return ts = toPull(pull.live(db, opts))
+}
 
-  ts.once('close', function () {
-    removeHook()
-    rs.destroy()
-  })
-
-  return ts
+module.exports.install = function (db) {
+  db.liveStream =
+  db.createLiveStream =
+    function (opts) {
+      return liveStream(db, opts)
+    }
 }
