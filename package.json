@@ -13,7 +13,9 @@
   "peerDependencies": {
     "level-sublevel": ">=4.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "level-sublevel": ">=4.0.2"
+  },
   "scripts": {
     "test": "set -e; for t in test/*.js; do node $t; done"
   },
