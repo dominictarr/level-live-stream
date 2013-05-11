@@ -13,13 +13,12 @@ but with a [streams2](https://github.com/isaacs/readable-stream) api.
 ``` js
 
 var levelup = require('levelup')
+var LiveStream = require('level-live-stream')
 
 var levelup('/tmp/level-live-stream', 
   {createIfMissing: true}, function (err, db) {
 
-  require('level-live-stream')(db)
-
-  db.liveStream()
+  LiveStream(db)
     .on('data', console.log)
 
   setInterval(function () {
