@@ -1,6 +1,5 @@
 var LiveStream = require('../')
-var SubLevel   = require('level-sublevel')
-var db = SubLevel(require('levelup')('/tmp/level-live-stream'))
+var db = require('levelup')('/tmp/level-live-stream')
 
 
 LiveStream(db, {tail: true}).on('data', function (data) {
