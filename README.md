@@ -2,6 +2,8 @@
 
 Stream live changes from levelup.
 
+[![Build Status](https://travis-ci.org/dominictarr/level-live-stream.png?branch=master)](https://travis-ci.org/dominictarr/level-live-stream)
+
 Works just like [LevelUp#readStream](https://github.com/rvagg/node-levelup#readStream)
 except instead of ending, it will stay open and stream changes to the database as they are inserted!
 
