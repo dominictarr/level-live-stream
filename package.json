@@ -13,7 +13,10 @@
   "peerDependencies": {
     "level-sublevel": ">=4.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "level": "~0.9.0",
+    "rimraf": "~2.1.4"
+  },
   "scripts": {
     "test": "set -e; for t in test/*.js; do node $t; done"
   },
