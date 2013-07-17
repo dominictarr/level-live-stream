@@ -14,14 +14,14 @@ but with a [streams2](https://github.com/isaacs/readable-stream) api.
 
 ``` js
 
-var levelup = require('levelup')
+var level = require('level')
 
-var levelup('/tmp/level-live-stream', 
+level('/tmp/level-live-stream', 
   {createIfMissing: true}, function (err, db) {
 
-  require('level-live-stream')(db)
+  var liveStream = require('level-live-stream')(db)
 
-  db.liveStream()
+  liveStream
     .on('data', console.log)
 
   setInterval(function () {
