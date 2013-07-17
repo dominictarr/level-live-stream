@@ -1,17 +1,16 @@
-var levelup = require('levelup')
+var level = require('level')
 
-levelup('/tmp/level-live-stream', {createIfMissing: true}, function (err, db) {
+level('/tmp/level-live-stream', 
+  {createIfMissing: true}, function (err, db) {
 
-  require('..')(db)
+  var liveStream = require('..')(db)
 
-  db.liveStream()
-    .on('data', function (data) {
-      console.log(data.type, ''+data.key, ''+data.value)
-    })
+  liveStream
+    .on('data', console.log)
 
   setInterval(function () {
     db.put('time', new Date().toString())
+
   }, 1000)
 
 })
-
