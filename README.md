@@ -16,7 +16,7 @@ but with a [streams2](https://github.com/isaacs/readable-stream) api.
 
 var level = require('level')
 
-var level('/tmp/level-live-stream', 
+level('/tmp/level-live-stream', 
   {createIfMissing: true}, function (err, db) {
 
   var liveStream = require('level-live-stream')(db)
