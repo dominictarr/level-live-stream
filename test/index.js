@@ -1,8 +1,6 @@
 var LiveStream = require('../')
 var SubLevel   = require('level-sublevel')
-var db = SubLevel(require('level')('/tmp/level-live-stream'))
-
-require('rimraf').sync('/tmp/level-live-stream')
+var db = SubLevel(require('level-test')()('test-level-live-stream'))
 
 LiveStream(db, {tail: true}).on('data', function (data) {
   db.get(data.key, console.log)
