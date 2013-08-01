@@ -33,7 +33,7 @@ level('/tmp/level-live-stream',
 
 ```
 
-You can also attach `liveStream` as a method of the db like below.
+You can also attach `liveStream` as a method to the db like below.
 
 ```js
 var LiveStream = require('level-live-stream');
