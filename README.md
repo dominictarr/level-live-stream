@@ -34,6 +34,8 @@ level('/tmp/level-live-stream',
 ```
 
 You can also attach `liveStream` as a method to the db like below.
+This will allow [multilevel](https://github.com/juliangruber/multilevel)
+clients to use `db.liveStream()`.
 
 ```js
 var LiveStream = require('level-live-stream');
