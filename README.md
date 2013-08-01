@@ -7,7 +7,7 @@ Stream live changes from levelup.
 Works just like [LevelUp#readStream](https://github.com/rvagg/node-levelup#readStream)
 except instead of ending, it will stay open and stream changes to the database as they are inserted!
 
-Just like the couchdb changes feed, but for any arbitary range of keys!
+Just like the couchdb changes feed, but for any arbitrary range of keys!
 
 see also, [level-livefeed](https://github.com/Raynos/level-livefeed/) for the same idea, 
 but with a [streams2](https://github.com/isaacs/readable-stream) api.
@@ -31,6 +31,19 @@ level('/tmp/level-live-stream',
 
 })
 
+```
+
+You can also attach `liveStream` as a method of the db like below.
+
+```js
+var LiveStream = require('level-live-stream');
+
+// attach the `liveStream` method using `install`
+LiveStream.install(db);
+
+// then invoke the method using the `db` instance
+db.liveStream()
+  .on('data', console.dir);
 ```
 
 ## options
