@@ -1,18 +1,24 @@
 var LiveStream = require('../')
 var SubLevel   = require('level-sublevel')
 var db = SubLevel(require('level-test')()('test-level-live-stream'))
+var assert = require('assert')
 
+var i = 10
+var j = 10
+var k = 10
+ 
 LiveStream(db, {tail: true}).on('data', function (data) {
-  db.get(data.key, console.log)
+  assert.equal(data.key, j--)
 })
 
 LiveStream(db, {old: false}).on('data', function (data) {
-  console.log('new:', data.key)
+  assert.equal(data.key, k--)
 })
 
-var i = 10
 var int = setInterval(function () {
-  db.put(Math.random().toString(), new Date(), console.log)
+  db.put(i+'', new Date(), function(err) {
+    assert(err == undefined)
+  })
   if(--i) return
   clearInterval(int)
-}, 100)
+}, 1)
