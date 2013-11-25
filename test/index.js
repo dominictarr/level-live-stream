@@ -21,4 +21,4 @@ var int = setInterval(function () {
   })
   if(--i) return
   clearInterval(int)
-}, 1)
+}, 100)
