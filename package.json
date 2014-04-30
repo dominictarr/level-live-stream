@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "pull-stream-to-stream": "~1.2.4",
-    "pull-level": "~1.1.10"
+    "pull-level": "~1.1.10",
+    "memdb": "^0.2.0"
   },
   "devDependencies": {
     "level-sublevel": ">=4.0.2",
