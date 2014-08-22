@@ -11,7 +11,7 @@
     "pull-level": "~1.1.10"
   },
   "devDependencies": {
-    "level-sublevel": ">=4.0.2",
+    "level-sublevel": "6.3.1",
     "level-test": "~1.4.0"
   },
   "scripts": {
