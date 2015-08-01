@@ -7,9 +7,9 @@
     "url": "git://github.com/dominictarr/level-live-stream.git"
   },
   "dependencies": {
-    "pull-stream-to-stream": "~1.2.4",
-    "pull-level": "~1.1.10",
-    "level-sublevel": "~6.3.1"
+    "level-sublevel": "~6.3.1",
+    "pull-level": "^1.4.1",
+    "pull-stream-to-stream": "~1.2.4"
   },
   "devDependencies": {
     "level-sublevel": ">=4.0.2",
