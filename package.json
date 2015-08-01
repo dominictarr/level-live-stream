@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "level-sublevel": ">=4.0.2",
-    "level-test": "~1.4.0"
+    "level-test": "^2.0.0"
   },
   "scripts": {
     "test": "set -e; for t in test/*.js; do node $t; done"
