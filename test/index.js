@@ -5,12 +5,19 @@ var assert = require('assert')
 
 var i = 10
 var j = 10
+var j2 = 10 // same as j, but with 'live' instead of 'tail' (deprecated)
 var k = 10
 
 LiveStream(db, {tail: true}).on('data', function (data) {
   console.log(data)
   if(data.type === 'put')
     assert.equal(data.key, j--)
+})
+
+LiveStream(db, {live: true}).on('data', function (data) {
+  console.log(data)
+  if(data.type === 'put')
+    assert.equal(data.key, j2--)
 })
 
 LiveStream(db, {old: false}).on('data', function (data) {
