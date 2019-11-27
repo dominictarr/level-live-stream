@@ -7,13 +7,12 @@
     "url": "git://github.com/dominictarr/level-live-stream.git"
   },
   "dependencies": {
-    "level-sublevel": "^6.6.1",
-    "pull-level": "^2.0.3",
-    "pull-stream-to-stream": "~1.2.4"
+    "pull-level": "^2.0.4",
+    "pull-stream-to-stream": "^2.0.0"
   },
   "devDependencies": {
-    "level-sublevel": ">=4.0.2",
-    "level-test": "^2.0.0"
+    "level-sublevel": "4",
+    "level-test": "^8.0.0"
   },
   "scripts": {
     "test": "set -e; for t in test/*.js; do node $t; done"
