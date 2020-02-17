@@ -4,7 +4,7 @@ var toStream = require('pull-stream-to-stream')
 var liveStream = module.exports = function (db, opts) {
   var ts
   opts = opts || {}
-  opts.tail = opts.tail !== false
+  opts.live = opts.live !== false
   if(opts.old === false)
     return toStream(null, pull.live(db, opts))
 
