@@ -7,7 +7,7 @@ var i = 10
 var j = 10
 var k = 10
 
-LiveStream(db, {tail: true}).on('data', function (data) {
+LiveStream(db, {live: true}).on('data', function (data) {
   console.log(data)
   if(data.type === 'put')
     assert.equal(data.key, j--)
